@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Maxim's Homepage</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mdb.min.js"></script>
+    <script src="js/data.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+</head>
+
+<body>
+    <header>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="" onclick="pageChange('home')">Maxim Tam</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active" id="home-button">
+                            <a class="nav-link" onclick="pageChange('home')" data-toggle="collapse" data-target="#navbarSupportedContent">Home</a>
+                        </li>
+                        <li class="nav-item" id="resume-button">
+                            <a class="nav-link" href="res/MaximTamTechnicalResume.pdf">Resume</a>
+                        </li>
+                        <li class="nav-item" id="contact-button">
+                            <a class="nav-link" onclick="pageChange('contact')" data-toggle="collapse" data-target="#navbarSupportedContent">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--/.Navbar-->
+    </header>
+    <div class="container" id="main">
+    </div>
+    <!--/ Main container-->
+</body>
+<script>
+    function modalChange(project) {
+        var title = ''
+        var body = ''
+        switch (project) {
+            case 'ctrl-cloud':
+                title = 'Ctrl-Cloud'
+                body = `
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="http://mtam2.github.io/Ctrl-Cloud/"></iframe>
+                    </div><br>
+                    <h3 class="text-center">
+                        <a href="http://mtam2.github.io/Ctrl-Cloud/">External Link</a>
+                    </h3>
+                `
+                break;
+            case 'deep-blue':
+                title = 'Deep Blue'
+                body = `
+                    <img src="img/DeepBlue.png" class="img-fluid">
+                    <div class="text-center">
+                        <a type="button" class="btn btn-primary" href="https://github.com/agonzalez2/DeepBlueGame">
+                            <img src="img/GitHub-Mark-32px.png"> GitHub Repo
+                        </a><br>
+                        <a class='text-center' href="res/DeepBlue.jar">
+                            <button type='button' class="btn btn-primary">Download DeepBlue.jar</button>
+                        </a>
+                    </div>
+                `
+                break;
+            case 'gfm':
+                title = 'Generic File Monitor'
+                body = gfm
+                break;
+            case 'hadoop':
+                title = 'Hadoop Cluster Installation'
+                body = hadoop
+                break;
+            case 'google':
+                title = 'Google Album API'
+                body = google
+                break;
+            case 'yolo':
+                title = 'Object Detection Webcam'
+                body = yolo
+                break;
+        }
+        $("#modal-title").html(title);
+        $("#modal-body").html(body);
+    }
+
+    function pageChange(topic) {
+        var title = ''
+        var body = ''
+        switch (topic) {
+            case 'home':
+                body = home_html
+                $('#home-button').addClass('active')
+                $('#contact-button').removeClass('active')
+                break;
+            case 'contact':
+                body = `
+                    <div class="divider-new pt-5">
+                        <h2 class="h2-responsive wow fadeIn" data-wow-delay="0.2s">Contact</h2>
+                    </div>
+                    <div class="text-center">
+                        <a type="button" class="btn-primary btn-lg" href="https://github.com/mtam2">
+                            <img src="img/GitHub-Mark-32px.png"> GitHub
+                        </a>
+                        <br><br>
+                        <a type="button" class="btn-success btn-lg black-text" href="mailto:mtamdev@gmail.com">
+                            <img src="img/gmail.ico" height="32" width="32"> mtamdev@gmail.com
+                        </a>
+                        <br><br>
+                        <a type="button" class="btn-outline-primary btn-lg" href="https://www.linkedin.com/in/maxim-tam/">
+                            <img src="img/linkedin.png" height="32" width="32"> LinkedIn
+                        </a>
+                        <br><br>
+                    </div>
+                `
+                $('#contact-button').addClass('active')
+                $('#home-button').removeClass('active')
+                break;
+        }
+        $("#main").html(body);
+    }
+
+    $(document).ready(pageChange("home"));
+
+</script>
+
+</html>
