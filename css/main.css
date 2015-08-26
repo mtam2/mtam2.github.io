@@ -17,3 +17,8 @@ body{
     margin-right:20px;
     padding-right:20px;
 }
+
+#wcg{
+    display:block;
+    margin: 0 auto;
+}
