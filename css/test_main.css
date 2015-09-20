@@ -1,0 +1,70 @@
+html{
+    background-color:#41566E;
+}
+
+body{
+    background-color:#f1f1f1;
+}
+
+.top{
+    background-color:white;
+    display:inline-block;
+    width:100%;
+}
+
+#home_icon{
+    display:block;
+    float:left;
+}
+
+.login{
+    display:block;
+    float:right;
+}
+
+#login_fields{
+    float:right;
+}
+
+.nav{
+    border: 1px solid black;
+    border-width: 1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.nav ul{
+    background:white;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.nav li {
+    position:relative;
+    display:inline;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    line-height: 40px;
+}
+
+.nav a{
+    display:inline-block;
+    text-decoration:none;
+    font-weight:bold;
+    padding:10px;
+    color:black;
+}
+    
+a:hover{
+    background-color: #f1f1f1;
+    text-decoration:underline;
+}
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
