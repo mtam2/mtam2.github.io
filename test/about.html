@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <Title>Advanced Analog Audio - Home</Title>
+        <meta name="description" content="A place for the true audiophile on a budget."/>
+        <!-- CSS imports -->
+        <link type="text/css" rel="stylesheet" href="../css/test_main.css"/>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+          
+    </head>
+    <body>
+        <div class="top">
+            <a href="../test.html">
+                    <img id="home_icon" src="http://adanalog.com/templates/jw_onemorething/images/omt_logo_header.png"/>
+            </a>
+            <div id="login_fields">               
+                <input class="login" type="text" name="username_input" placeholder="Username" size="25"> <br/>
+                <input class="login" type="password" name="password_input" placeholder="Password" size="25"> <br/>
+                <input name="Submit" class="button" value="Login" type="submit">
+                <input id="remember" class="login" type="checkbox" name="remember" value="yes"><label for="remember">Remember me</label>
+                
+            </div>    
+        
+        
+            <div class="nav"> 
+                <ul>
+                    <!--REMEMBER TO HARDCODE OR /INDEX URL-->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="shop.html">Shop<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">All Products</a></li>
+                            <li><a href="shop.html">Product 1</a></li>
+                            <li><a href="shop.html">Product 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pictures.html">Pictures</a></li>
+                    <li><a href="forums.html">Forums</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#about">About Ada Lin</a></li>
+                            <li><a href="about.html#faq">FAQ</a></li>
+                            <li><a href="about.html#contact">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="middle">
+            <h1>
+                About Ada Lin
+            </h1>
+            <h1>
+                FAQ
+            </h1>
+            
+            <div id="contact">
+                <h1>
+                    <a>Contact Us</a>
+                </h1>
+                </table>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+					<tr>
+				<td colspan="2">
+				<br />
+				Please do not hesitate to let us know If you have any questions.				<br /><br />
+				<form action="http://adanalog.com/index.php?option=com_contact&amp;Itemid=3" method="post" name="emailForm" target="_top" id="emailForm">
+				<div class="contact_email">
+					<label for="contact_name">
+						 Enter your name:					</label>
+					<br />
+					<input type="text" name="name" id="contact_name" size="30" class="inputbox" value="" />
+					<br />
+					<label for="contact_email">
+						 E-mail address:					</label>
+					<br />
+					<input type="text" name="email" id="contact_email" size="30" class="inputbox" value="" />
+					<br />
+					<label for="contact_subject">
+						 Message subject:					</label>
+					<br />
+					<input type="text" name="subject" id="contact_subject" size="30" class="inputbox" value="" />
+					<br /><br />
+					<label for="contact_text">
+						 Enter your message:					</label>
+					<br />
+					<textarea cols="50" rows="10" name="text" id="contact_text" class="inputbox"></textarea>
+											<br />
+							<input type="checkbox" name="email_copy" id="contact_email_copy" value="1"  />
+							<label for="contact_email_copy">
+								E-mail a copy of this message to your own address							</label>
+											<br />
+					<br />
+					<input type="button" name="send" value="Send" class="button" onclick="validate()" />
+				</div>
+				<input type="hidden" name="option" value="com_contact" />
+				<input type="hidden" name="con_id" value="1" />
+				<input type="hidden" name="sitename" value="Advanced Analog Audio " />
+				<input type="hidden" name="op" value="sendmail" />
+				<input type="hidden" name="j723b1d89b777e9cef0b2bda8ef9290d5" value="1" />
+				</form>
+				<br />
+				</td>
+			</tr>
+					</table>
+            </div>
+        </div>
+    </body>
+</html>

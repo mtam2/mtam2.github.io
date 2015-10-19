@@ -1,5 +1,7 @@
 html{
     background-color:#41566E;
+    padding:5px;
+    margin:5px;
 }
 
 body{
@@ -26,6 +28,12 @@ body{
     float:right;
 }
 
+
+#remember{
+    margin-right:2px;
+    margin-top:7px;
+}
+
 .nav{
     border: 1px solid black;
     border-width: 1px 0;
@@ -36,8 +44,7 @@ body{
 }
 
 .nav ul{
-    background:white;
-    margin:0;
+    
     padding:0;
     text-align:center;
 }
@@ -63,8 +70,34 @@ a:hover{
     text-decoration:underline;
 }
 
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
       width: 70%;
       margin: auto;
-  }
+}
+
+/*
+Shop
+*/
+
+#pay_button{
+    text-align:center;
+}
+
+/*
+Middle
+*/
+.middle{
+    padding:30px;
+    border: 1px solid;
+}
+
+.middle a{
+    color:black;
+    text-decoration:none;
+}
+
+.middle a:hover{
+    background-color:#F1F1F1;
+    text-decoration:none;
+}
