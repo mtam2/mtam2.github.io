@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+<p>
+	<h1>How to fix Error 50 when starting DOA on Windows 8.1</h1>
+	<ol>
+		<li>Confirm it is error 50</li>
+		<img src="http://i.imgur.com/1kjYoZg.png?1"/>
+		<li>Confirm you are have SQL Server 2012 Express installed</li>
+		<li>Confirm you are have SQL Server 2012 Express LocalDB</li>
+		<img src="http://i.imgur.com/cYie9RS.png?2"/>
+		<li>Close all running instances of DOA</li>
+		<li>Open CMD as Administrator</li>
+		<img src="http://i.imgur.com/xXsCH2g.png?1"/>
+		<li>Type "cd c:\Program Files\Microsoft SQL Server\110\Tools\Binn" <br/> Or wherever you installed SQL server to</li>
+		<li>Type "sqllocaldb.exe delete v11.0"</li>
+		<img src="http://i.imgur.com/FeLBNWC.png?1">
+		<li>Now run DOA <br/> User: Admin </br> Password: Password</li>
+	</ol>
+</p>
+</body>
+</html>
