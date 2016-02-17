@@ -26,19 +26,20 @@
       <!--JQuery-->
       <script>
         $(document).ready(function(){
-          $("button").click(function(){
-            if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(function(position) {
-                $("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
-              });
-            }
+          $("#copy").click(function(){
+            $("#words").select();
+            document.execCommand('copy');
+          });
+          $("#paste").click(function(){
+            $("#paste").html("Unable to paste, please right click or ctrl+V");
           });
         });
       </script>
     </head>
     
-    <body class="text-center">
-        <button class="btn btn-primary btn-large">Location</button>
-        <p id="data" style="font-size:200%"></p>
+    <body style="font-size:200%" class="text-center">
+        <button class="btn btn-primary btn-large" id="copy">Copy all words</button>
+        <button class="btn btn-primary btn-large" id="paste">Paste all words</button><br>
+        <textarea rows="7" cols="50" id="words">words</textarea>
     </body>
 </html>
