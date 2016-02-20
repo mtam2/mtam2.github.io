@@ -13,32 +13,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
       <!--Javascript-->
-      <script>
-        function generate(){
-          var x=document.getElementById("words");
-          //var arr=["zero","one","two","three","four","five","six","seven","eight","nine","ten"];
-          var arr=[];
-          var r=Math.floor(Math.random()*arr.length);
-          x.innerHTML=arr[r].toUpperCase();
-        };
-      </script>
-      
-      <!--JQuery-->
-      <script>
-        $(document).ready(function(){
-          $("#copy").click(function(){
-            $("#words").select();
-            document.execCommand('copy');
-          });
-          $("#paste").click(function(){
-            $("#paste").html("Unable to paste, please right click or ctrl+V");
-          });
-        });
-      </script>
+      <script src="/res/copy.js"></script>
     </head>
     
     <body style="font-size:200%" class="text-center">
-        <button class="btn btn-primary btn-large" id="copy">Copy all words</button>
+        <button class="btn btn-primary btn-large" id="copy" onclick="copyToClipboard('$(#words)')">Copy all words</button>
         <button class="btn btn-primary btn-large" id="paste">Paste all words</button><br>
         <textarea rows="7" cols="50" id="words">words</textarea>
     </body>
