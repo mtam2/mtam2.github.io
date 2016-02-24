@@ -19,9 +19,13 @@
             $("#words").select();
             document.execCommand('copy');
         }
-        function copy(){
+        function paste(){
             $("#words").select();
             document.execCommand('paste');
+        }
+        function cut(){
+            $("words").select();
+            document.execCommand('cut');
         }
     </script>
 </head>
@@ -29,6 +33,7 @@
 <body style="font-size:200%" class="text-center">
     <button class="btn btn-primary btn-large" id="copy" onclick="copy()">Copy all words</button>
     <button class="btn btn-primary btn-large" id="paste" onclick="paste()">Paste all words</button>
+    <button class="btn btn-primary btn-large" id="cut" onclick="cut()">Cut all words</button>
     <br>
     <textarea rows="7" cols="50" id="words">words</textarea>
 </body>
