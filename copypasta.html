@@ -20,13 +20,31 @@
             document.execCommand('copy');
         }
         function paste(){
-            $("#words").select();
             document.execCommand('paste');
         }
         function cut(){
             $("words").select();
             document.execCommand('cut');
         }
+    </script>
+    
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+        
+    	$("#words").bind({
+    		copy : function(){
+    			$('span').text('copy behaviour detected!');
+    		},
+    		paste : function(){
+    			$('span').text('paste behaviour detected!');
+    		},
+    		cut : function(){
+    			$('span').text('cut behaviour detected!');
+    		}
+    	});
+    
+    });	
     </script>
 </head>
 
@@ -35,7 +53,8 @@
     <button class="btn btn-primary btn-large" id="paste" onclick="paste()">Paste all words</button>
     <button class="btn btn-primary btn-large" id="cut" onclick="cut()">Cut all words</button>
     <br>
-    <textarea rows="7" cols="50" id="words">words</textarea>
+    <textarea rows="7" cols="50" id="words">words</textarea><br>
+    <span></span>
 </body>
 
 </html>
