@@ -43,8 +43,16 @@
     			$('span').text('cut behaviour detected!');
     		}
     	});
-    
-    });	
+    });
+    	
+	$(document).keydown(function(event){ 
+        if(event.ctrlKey && event.keyCode == 86){
+            alert("Paste detected");
+    }});	
+	$(document).keydown(function(event){ 
+        if(event.ctrlKey && event.keyCode == 67){
+            alert("Copy detected");
+    }});	
     </script>
 </head>
 
@@ -55,6 +63,15 @@
     <br>
     <textarea rows="7" cols="50" id="words">words</textarea><br>
     <span></span>
+    <p>Lorem ipsum dolor sit amet, pro cu nibh errem conclusionemque. Dolore vivendo suavitate ei pro, eu nam dicta menandri. Tamquam senserit evertitur ius et, cu mea erat quidam. Sed latine nusquam ad, quot mollis id cum, in vis dico illum. In sale intellegat omittantur qui, ei mollis molestiae delicatissimi his.
+
+Quo at suas meis sonet, vidit ullum debitis eos an. Zril albucius ad pri, quot splendide no mel. Mea mundi concludaturque cu. Mel ad adipisci gloriatur. Autem ludus fuisset at mea, aliquam democritum suscipiantur cu vel. Pro wisi oblique recusabo ne, omnes quaestio per cu. Graeci fabellas his ea.
+
+Saepe soleat ei per, elitr tempor docendi eos ei, usu cu ridens dolorem ceteros. No nec homero verear docendi, cu vero saepe consequat quo. Pro case minimum an. Ea alii affert fastidii cum, nam id facer verear inimicus, aperiri suscipiantur ad sit. Eleifend deseruisse scriptorem est ea, habemus fabellas ut cum.
+
+Sed ponderum perpetua at, ut denique nominati constituam duo. Ornatus assentior accommodare in sed, vim ad malis expetendis, sea eu option hendrerit. Ius case aliquid invenire ex. Sed admodum percipit ut, erant feugait cu vis.
+
+At vel alii paulo platonem, sea dicat quaestio at, dicit partem deterruisset vis te. Ei nec aeque recusabo, graecis deleniti cu eam, ea tollit facilis epicurei sit. Solum legere semper mei in. An regione euripidis democritum mea, ex solet vivendo signiferumque per. Et pro alii conceptam, eu mei wisi recusabo explicari.</p>
 </body>
 
 </html>
