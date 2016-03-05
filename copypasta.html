@@ -47,11 +47,13 @@
     	
 	$(document).keydown(function(event){ 
         if(event.ctrlKey && event.keyCode == 86){
-            alert("Paste detected");
+            $('span').text('paste behaviour detected!');
+            document.execCommand('paste');
     }});	
 	$(document).keydown(function(event){ 
         if(event.ctrlKey && event.keyCode == 67){
-            alert("Copy detected");
+            $('span').text('copy behaviour detected!');
+            document.execCommand('copy');
     }});	
     </script>
 </head>
