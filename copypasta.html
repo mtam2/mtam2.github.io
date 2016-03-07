@@ -30,31 +30,41 @@
     
     <script type="text/javascript">
 
-    $(document).ready(function() {
+    // $(document).ready(function() {
         
-    	$("#words").bind({
-    		copy : function(){
-    			$('span').text('copy behaviour detected!');
-    		},
-    		paste : function(){
-    			$('span').text('paste behaviour detected!');
-    		},
-    		cut : function(){
-    			$('span').text('cut behaviour detected!');
-    		}
-    	});
+    // 	$("#words").bind({
+    // 		copy : function(){
+    // 			$('span').text('copy behaviour detected!');
+    // 		},
+    // 		paste : function(){
+    // 			$('span').text('paste behaviour detected!');
+    // 		},
+    // 		cut : function(){
+    // 			$('span').text('cut behaviour detected!');
+    // 		}
+    // 	});
+    // });
+    var $clip = '';	
+    $(document).ready(function(){
+        $("#twitter").click(function(){
+            $('#twitter').attr('href',"https://twitter.com/intent/tweet?text="+$("#words").text());
+        });
     });
-    	
 	$(document).keydown(function(event){ 
         if(event.ctrlKey && event.keyCode == 86){
             $('span').text('paste behaviour detected!');
+            $("#words").focus();
             document.execCommand('paste');
+            $('#twitter').click();
     }});	
 	$(document).keydown(function(event){ 
         if(event.ctrlKey && event.keyCode == 67){
             $('span').text('copy behaviour detected!');
             document.execCommand('copy');
-    }});	
+            $("#words").focus();
+            document.execCommand('paste');
+    }});
+
     </script>
 </head>
 
@@ -62,6 +72,7 @@
     <button class="btn btn-primary btn-large" id="copy" onclick="copy()">Copy all words</button>
     <button class="btn btn-primary btn-large" id="paste" onclick="paste()">Paste all words</button>
     <button class="btn btn-primary btn-large" id="cut" onclick="cut()">Cut all words</button>
+    <button class="btn btn-primary btn-large btn-success" id="twitter">Post to Twitter</button>
     <br>
     <textarea rows="7" cols="50" id="words">words</textarea><br>
     <span></span>
