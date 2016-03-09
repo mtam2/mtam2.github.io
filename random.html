@@ -26,11 +26,11 @@
       
       <!--JQuery-->
       <script>
-        $(document).ready(function(){
-          $("button").click(function(){
-            $('#twitter').attr('href',"https://twitter.com/intent/tweet?text="+$("#words").text());
-          });
-        });
+        // $(document).ready(function(){
+        //   $("button").click(function(){
+        //     $('#twitter').attr('href',"https://twitter.com/intent/tweet?text="+$("#words").text());
+        //   });
+        // });
       </script>
     </head>
     
@@ -41,7 +41,7 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1" style="background-color:#FAFAD2">
             <p id="words" style="font-size:500%">WORDS</p><br>
-            <a id="twitter" type="button" class="btn btn-success">Twitter</a>
+            <a id="twitter" type="button" class="btn btn-success" href="" onclick="$('#twitter').attr('href','https://twitter.com/intent/tweet?text='+$('#words').text());">Twitter</a>
             <a type="button" class="btn btn-primary">Facebook</a>
             <a type="button" class="btn btn-success">IDK</a>
           </div>
