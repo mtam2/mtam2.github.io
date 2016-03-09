@@ -25,9 +25,7 @@
             $("words").select();
             document.execCommand('cut');
         }
-    </script>
-    
-    <script type="text/javascript">
+
     $(document).ready(function(){
 	    var left = 140
 	    $('#text_counter').text('Characters left: ' + left);
@@ -47,20 +45,7 @@
 	        $('#text_counter').text('Characters left: ' + left);
 	    });
 	});
-    // $(document).ready(function() {
-        
-    // 	$("#words").bind({
-    // 		copy : function(){
-    // 			$('span').text('copy behaviour detected!');
-    // 		},
-    // 		paste : function(){
-    // 			$('span').text('paste behaviour detected!');
-    // 		},
-    // 		cut : function(){
-    // 			$('span').text('cut behaviour detected!');
-    // 		}
-    // 	});
-    // });
+
     $(document).ready(function(){
         $("button").click(function(){
             $('#twitter').attr('href',"https://twitter.com/intent/tweet?text="+$('#words').text());
@@ -84,7 +69,6 @@
 </head>
 
 <body style="font-size:200%" class="text-center">
-    <!--style="visibility:hidden-->
     <button class="btn btn-primary btn-large" id="copy" onclick="copy()">Copy all words</button>
     <button class="btn btn-primary btn-large" id="paste" onclick="paste()">Paste all words</button>
     <button class="btn btn-primary btn-large" id="cut" onclick="cut()">Cut all words</button>
