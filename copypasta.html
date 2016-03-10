@@ -55,7 +55,10 @@
         if(event.ctrlKey && event.keyCode == 86){
             $('#current').text('paste behaviour detected!');
             $("#words").focus();
-            $('#twitter').click();
+	    setTimeout(function(){
+            	$('#twitter').click();
+            }, 10);
+            
     }});	
 	$(document).keydown(function(event){ 
         if(event.ctrlKey && event.keyCode == 67){
