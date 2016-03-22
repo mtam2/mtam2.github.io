@@ -46,28 +46,6 @@
 	    });
 	});
 
-    $(document).ready(function(){
-        $("button").click(function(){
-            $('#twitter').attr('href',"https://twitter.com/intent/tweet?text="+$('#words').text());
-        });
-    });
-	$(document).keydown(function(event){ 
-        if(event.ctrlKey && event.keyCode == 86){
-            $('#current').text('paste behaviour detected!');
-            $("#words").focus();
-	    setTimeout(function(){
-            	$('#twitter').click();
-            }, 10);
-            
-    }});	
-	$(document).keydown(function(event){ 
-        if(event.ctrlKey && event.keyCode == 67){
-            $('#current').text('copy behaviour detected!');
-            document.execCommand('copy');
-            $("#words").focus();
-            document.execCommand('paste');
-    }});
-
     </script>
 </head>
 
