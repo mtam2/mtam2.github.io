@@ -1,11 +1,46 @@
-<h1>How to unfreeze an object in Ruby!</h1>
-<xmp>
-a = "String".freeze
-a.frozen? #true
-a = a.to_s #"String"
-a.frozen? #flase
-</xmp>
+<!DOCTYPE html>
+<!--http://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp-->
+<html>
 
-<h1>How to add columns to an existing database in rails</h1>
-<xmp>rails generate migration Add[COLUMN_NAME||GROUP_NAME]To[TABLE_NAME] COLUMN_NAME:DATA_TYPE COLUMN_NAME:DATA_TYPE</xmp>
-<xmp>rake db:migrate</xmp>
+<head>
+    <title>Maxim's Homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/custom.css"/>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+        <ul class="nav nav-pills nav-justified">
+            <li class="active"><a href="index.html">Main</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>How to unfreeze an object in Ruby!</h1><hr>
+        <p>In Ruby, there exists a method <code>freeze</code> which causes the variable to be immutable. There does not exist a <code>unfreeze</code> so a method to bypass this is to clone the object. You can clone the object to itself to unfreeze the variable.</p>
+        <pre>a = "String".freeze&#10;a.frozen? #true&#10;a = a.to_s #"String"&#10;a.frozen? #false</pre>
+
+
+        <h1>How to add columns to an existing database in rails</h1><hr>
+        <p>While in PSQL console:<p>
+        <pre>rails generate migration add[COLUMN_NAME||GROUP_NAME]To[TABLE_NAME] COLUMN_NAME:DATA_TYPE COLUMN_NAME:DATA_TYPE&#10;rake db:migrate</pre>
+        <pre>rails generate migration AddEmailToUsers email:string&#10;rake db:migrate</pre>
+        <p>You can also add contraints like indexes</p>
+        <pre>rails generate migration AddIdToUsers id:integer:index&#10;rake db:migrate</pre>
+
+    </div>
+</body>
+
+</html>
