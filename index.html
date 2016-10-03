@@ -3,54 +3,84 @@
 <html>
     <head>
         <title>Maxim's Homepage</title>
-        <!--<link rel="stylesheet" type="text/css" href="css/main.css"/>-->
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
         
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        
+        <link rel='stylesheet' href='css/bootstrap.min.css'>
         <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        
+        <script src="js/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     
     <body>
-        <div class="container">
-            <ul class="nav nav-pills nav-justified">
-                <li class="active"><a href="index.html">Main</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-            </ul>
-        </div>
-        
         <div class="container-fluid">
-            <div class="jumbotron">
-                <h1 class="text-center">Maxim Tam's Homepage</h1>
-                <h4 class="text-center"></h4>
+            <div class='text-center'>
+                <h3>Maxim Tam</h3>
+                <h5>Junior Developer</h5>
             </div>
+            <div class='col-md-8 col-md-offset-2 grey'>
             <div class="row">
-                <div class="col-md-2 col-md-offset-5" style="background-color:#FAFAD2;">
-                    <h2>About</h2>
-                    <p>
-                        Hi! I am a software developer graduate from GGC and currently aspiring to be a <br>
-                        <s>Fullstack developer</s><br>
-                        <s>Ruby on Rails developer</s><br>
-                        <s>Java developer</s><br>
-                        <s>Android developer</s><br>
-                        <s>Database Administrator</s><br>
-                        <s>QA Analyst</s><br>
-                        "Freelancer".<hr>
-                        Current Big Project: <a class="btn btn-primary btn-lg center-block" href="http://mtam2.github.io/Ctrl-Cloud/"><img src="img/ctrl_cloud_logo.png" height=20 width=20> Ctrl-Cloud</a><br>
-                        <a type="button" class="btn btn-primary btn-lg center-block" href="https://github.com/mtam2">GitHub</a><br>
-                        <a type="button" class="btn btn-success btn-lg center-block" href="mailto:mtamdev@gmail.com">Email</a>
-                    </p>
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active"><a href="index.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class='row'>
+                <div class='col-sm-4 col-sm-offset-4 text-center'>
+                    <h3>Projects</h3>
                 </div>
             </div>
+            <div class='row'>
+                <div class='col-sm-8'>
+                    <h3><a href="http://mtam2.github.io/Ctrl-Cloud/">Ctrl-Cloud v1.0</a></h3>
+                      <li>Multi-platform (Android, Web, Windows) integration with Ruby on Rails Backend</li>
+                      <li>Developed RESTful API to utilized JSON parsers for multi-platform access</li>
+                      <li>Deployed to Heroku, Google Play Store, Chrome Extension Store, Firefox Add-on Marketplace</li>
+                      <li>Utilized integration and unit testing tools like Selenium, MiniTest, JUnit</li>
+                    <br><iframe src="http://mtam2.github.io/Ctrl-Cloud/"></iframe>
+                </div>
+                <div class='col-sm-4'>
+                    <img align='right' src='img/ctrl_cloud_logo_128x128.png'>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-sm-8'>
+                    <h3><a href='https://github.com/agonzalez2/DeepBlueGame'>Deep Blue</a></h3>
+                    <li>Paired programming with two colleagues using Waterfall methodology</li>
+                    <li>Utilized Java 8 and Eclipse IDE to design, code, test a fully functional text-based adventure game</li>
+                    <li>Analyzed requirements specifications to construct UML/ERD diagrams, wireframes, and JUnit tests</li>
+                    <img class="img-fluid" src='img/DeepBlue.jpg'>  
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-sm-8'>
+                    <h3><a href="">Ctrl-Cloud v2.0</a></h3>
+                    <li>Refactored Ctrl-Cloud v1.0 to reduce Heroku dependency</li>
+                    <li>Established Local MySQL Database to store temporary clipboard data</li>
+                    <li>Developed C# WinForm application in Visual Studio 2015</li>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-sm-8'>
+                    <h3><a href="https://play.google.com/store/apps/details?id=commtam2.httpsgithub.dumbsmartphone">Simple Launcher Android Application</a></h3>
+                    <li>Designed, coded, unit tested a custom Android app to assist the visually impaired to use basic function of an Android phone</li>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-sm-8'>
+                    <h3><a href="https://github.com/mtam2/ComicShellScript">Automated Shell Comic Retriever</a></h3>
+                    <li>Automated retrieval of various webcomics via Shell scripting and crontab</li>
+                    <li>Automatically generates a main HTML page for comic viewing</li>
+                    <li>Deployed to a Ruby on Rails server on Heroku for live demo</li>
+                </div>
+            </div>
+            
+            </div>
         </div>
+    <br><p class="text-center">Word of the day: Defenestrate</p>
     </body>
-    <p class="text-center">Word of the day: Defenestrate</p>
 </html>

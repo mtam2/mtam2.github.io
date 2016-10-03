@@ -1,24 +1,12 @@
-body{
-    background-color:grey;
-    font-family:arial;
+.grey{
+    background-color:#EFEFEF;
+    box-shadow: 10px 10px 5px #888888;
+    font-family:Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
-.container{
-    padding: 50px auto;
-    margin-top: 10px;
-    margin-bottom:10px;
-    margin-right:10px;
-    margin-left:10px;
-    background-color:white;
-}
-
-.nav li{
-    display:inline;
-    margin-right:50px;
-    padding-right:50px;
-}
-
-#wcg{
-    display:block;
-    margin: 0 auto;
+iframe {
+  height: 300px;
+  width: 500px;
+  resize: both;
+  overflow: auto;
 }
