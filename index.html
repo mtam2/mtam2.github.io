@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <!--http://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp-->
 <html>
-    <head>
-        <title>Maxim's Homepage</title>
-        <link rel="stylesheet" type="text/css" href="css/main.css"/>
-        
-        <!-- Latest compiled and minified CSS -->
-        <link rel='stylesheet' href='css/bootstrap.min.css'>
-        <!-- jQuery library -->
-        <script src="js/jquery.min.js"></script>
-        <!-- Latest compiled JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    
-    <body>
-        <div class="container-fluid">
-            <div class='text-center'>
-                <h3>Maxim Tam</h3>
-                <h5>Junior Developer</h5>
-            </div>
-            <div class='col-md-8 col-md-offset-2 grey'>
-            <div class="row">
-                <ul class="nav nav-pills nav-justified">
-                    <li class="active"><a href="index.html">Projects</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+
+<head>
+    <title>Maxim's Homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class='text-center'>
+            <h3>Maxim Tam</h3>
+            <h5>Junior Developer</h5>
+        </div>
+        <div class='col-md-8 col-md-offset-2 grey'>
+            <ul class="nav nav-pills nav-justified">
+                <li class="active"><a href="index.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
             <div class='row'>
                 <div class='col-sm-4 col-sm-offset-4 text-center'>
                     <h3>Projects</h3>
@@ -37,11 +36,12 @@
             <div class='row'>
                 <div class='col-sm-8'>
                     <h3><a href="http://mtam2.github.io/Ctrl-Cloud/">Ctrl-Cloud v1.0</a></h3>
-                      <li>Multi-platform (Android, Web, Windows) integration with Ruby on Rails Backend</li>
-                      <li>Developed RESTful API to utilized JSON parsers for multi-platform access</li>
-                      <li>Deployed to Heroku, Google Play Store, Chrome Extension Store, Firefox Add-on Marketplace</li>
-                      <li>Utilized integration and unit testing tools like Selenium, MiniTest, JUnit</li>
-                    <br><iframe src="http://mtam2.github.io/Ctrl-Cloud/"></iframe>
+                    <li>Multi-platform (Android, Web, Windows) integration with Ruby on Rails Backend</li>
+                    <li>Developed RESTful API to utilized JSON parsers for multi-platform access</li>
+                    <li>Deployed to Heroku, Google Play Store, Chrome Extension Store, Firefox Add-on Marketplace</li>
+                    <li>Utilized integration and unit testing tools like Selenium, MiniTest, JUnit</li>
+                    <br>
+                    <div class="embed-responsive embed-responsive-4by3"><iframe class="embed-responsive-item" src="http://mtam2.github.io/Ctrl-Cloud/"></iframe></div>
                 </div>
                 <div class='col-sm-4'>
                     <img align='right' src='img/ctrl_cloud_logo_128x128.png'>
@@ -53,7 +53,12 @@
                     <li>Paired programming with two colleagues using Waterfall methodology</li>
                     <li>Utilized Java 8 and Eclipse IDE to design, code, test a fully functional text-based adventure game</li>
                     <li>Analyzed requirements specifications to construct UML/ERD diagrams, wireframes, and JUnit tests</li>
-                    <img class="img-fluid" src='img/DeepBlue.jpg'>  
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <img class="img-responsive" src='img/DeepBlue.png'>
+                    <br><a class='text-center' href="res/DeepBlue.jar"><button type='button' class="btn btn-primary btn-sm">Download DeepBlue.jar</button></a>
                 </div>
             </div>
             <div class='row'>
@@ -78,9 +83,11 @@
                     <li>Deployed to a Ruby on Rails server on Heroku for live demo</li>
                 </div>
             </div>
-            
-            </div>
+
         </div>
-    <br><p class="text-center">Word of the day: Defenestrate</p>
-    </body>
+    </div>
+    <br>
+    <p class="text-center">Word of the day: Defenestrate</p>
+</body>
+
 </html>
