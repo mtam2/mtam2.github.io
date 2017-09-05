@@ -20,21 +20,21 @@
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">Maxim Tam</a>
+                <a class="navbar-brand" href="" onclick="pageChange('home')">Maxim Tam</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item active" id="home-button">
+                            <a class="nav-link" onclick="pageChange('home')" data-toggle="collapse" data-target="#navbarSupportedContent">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Resume</a>
+                        <li class="nav-item" id="resume-button">
+                            <a class="nav-link" href="res/MaximTamTechnicalResume.pdf">Resume</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                        <li class="nav-item" id="contact-button">
+                            <a class="nav-link" onclick="pageChange('contact')" data-toggle="collapse" data-target="#navbarSupportedContent">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -68,7 +68,81 @@
                 <div class="col-lg-4 mb-r">
 
                     <!--Card-->
-                    <div class="card wow fadeIn">
+                    <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('tjm')">
+
+                        <!--Card image-->
+                        <img class="img-fluid" src="img/TJM.png" alt="Card image cap">
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title text-center">Track-It! Jira Integration</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">System integration between two ticketing systems, BMC Track-It! and Jira Software.</p>
+                            <hr>
+                            <p class="card-text">Developers: D. Tremer, M. Tam</p>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--First columnn-->
+
+                <!--Second columnn-->
+                <div class="col-lg-4 mb-r">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('gfm')">
+
+                        <!--Card image-->
+                        <img class="img-fluid" src="img/GFM.png" alt="Card image cap">
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title text-center">Generic File Monitor</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">An application to analyze files' metadata using machine learning algorithms.</p>
+                            <hr>
+                            <p class="card-text">Developers: D. Tremer, M. Tam</p>
+                        </div>
+
+                    </div>
+
+                    <!--/.Card-->
+                </div>
+                <!--Second columnn-->
+
+                <!--Third columnn-->
+                <div class="col-lg-4 mb-r">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('hadoop')">
+
+                        <!--Card image-->
+                        <img class="img-fluid" src="img/hadoop.jpg" alt="Card image cap">
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title text-center">Hadoop Cluster Installation</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">Custom built a Hadoop cluster with 5 decommissioned desktops.</p>
+                            <hr>
+                            <p class="card-text">Developers: D. Tremer, M. Tam</p>
+                        </div>
+
+                    </div>
+
+                    <!--/.Card-->
+                </div>
+                <!--Third columnn-->
+
+                <!--First columnn-->
+                <div class="col-lg-4 mb-r">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('ctrl-cloud')">
 
                         <!--Card image-->
                         <img class="img-fluid" src="img/ctrl_cloud_logo_SVG.png" alt="Card image cap">
@@ -92,8 +166,7 @@
                 <!--Second columnn-->
                 <div class="col-lg-4 mb-r">
                     <!--Card-->
-                    <div class="card wow fadeIn" data-wow-delay="0.2s">
-
+                    <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('deep-blue')">
                         <!--Card image-->
                         <img class="img-fluid" src="img/DeepBlue.png" alt="Card image cap">
 
@@ -116,82 +189,10 @@
                 <!--Third columnn-->
                 <div class="col-lg-4 mb-r">
                     <!--Card-->
-                    <div class="card wow fadeIn" data-wow-delay="0.4s">
+                    <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('google')">
 
                         <!--Card image-->
-                        <img class="img-fluid" src="img/GFM.png" alt="Card image cap">
-
-                        <!--Card content-->
-                        <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title text-center">Generic File Monitor</h4>
-                            <hr>
-                            <!--Text-->
-                            <p class="card-text">An application to analyze files' metadata using machine learning algorithms.</p>
-                            <hr>
-                            <p class="card-text">Developers: D. Tremer, M. Tam</p>
-                        </div>
-
-                    </div>
-                    <!--/.Card-->
-                </div>
-                <!--Third columnn-->
-
-                <!--First columnn-->
-                <div class="col-lg-4 mb-r">
-                    <!--Card-->
-                    <div class="card wow fadeIn" data-wow-delay="0.6s">
-
-                        <!--Card image-->
-                        <img class="img-fluid" src="img/GFM.png" alt="Card image cap">
-
-                        <!--Card content-->
-                        <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title text-center">Track-It! Jira Integration</h4>
-                            <hr>
-                            <!--Text-->
-                            <p class="card-text">System integration between two ticketing systems, BMC Track-It! and Jira Software.</p>
-                            <hr>
-                            <p class="card-text">Developers: D. Tremer, M. Tam</p>
-                        </div>
-
-                    </div>
-                    <!--/.Card-->
-                </div>
-                <!--First columnn-->
-
-                <!--Second columnn-->
-                <div class="col-lg-4 mb-r">
-                    <!--Card-->
-                    <div class="card wow fadeIn" data-wow-delay="0.6s">
-
-                        <!--Card image-->
-                        <img class="img-fluid" src="img/GFM.png" alt="Card image cap">
-
-                        <!--Card content-->
-                        <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title text-center">Hadoop Cluster Installation</h4>
-                            <hr>
-                            <!--Text-->
-                            <p class="card-text">System integration between two ticketing systems, BMC Track-It! and Jira Software.</p>
-                            <hr>
-                            <p class="card-text">Developers: D. Tremer, M. Tam</p>
-                        </div>
-
-                    </div>
-                    <!--/.Card-->
-                </div>
-                <!--Second columnn-->
-
-                <!--Third columnn-->
-                <div class="col-lg-4 mb-r">
-                    <!--Card-->
-                    <div class="card wow fadeIn" data-wow-delay="0.6s">
-
-                        <!--Card image-->
-                        <img class="img-fluid" src="img/GFM.png" alt="Card image cap">
+                        <img class="img-fluid" src="img/pi.jpg" alt="Card image cap">
 
                         <!--Card content-->
                         <div class="card-body">
@@ -213,8 +214,89 @@
         </section>
         <!--/Section: Projects-->
 
+        <!-- Modal -->
+        <div id="project-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                        <h4 class="modal-title" id="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modal-body">Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                    </div>
+                </div>
+                <!-- /Modal content -->
+
+            </div>
+        </div>
+        <!-- /Modal -->
+
+
     </div>
     <!--/ Main container-->
 </body>
+<script>
+    function modalChange(project) {
+        var title = ''
+        var body = ''
+        switch (project) {
+            case 'ctrl-cloud':
+                title = 'Ctrl-Cloud'
+                body = '<div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" src="http://mtam2.github.io/Ctrl-Cloud/"></iframe> </div><br><h3 class="text-center"><a href="http://mtam2.github.io/Ctrl-Cloud/">External Link</a></h3>'
+                break;
+            case 'deep-blue':
+                title = 'Deep Blue'
+                body = '<img src="img/DeepBlue.png" class="img-fluid"><div class="text-center"><a type="button" class="btn btn-primary" href="https://github.com/agonzalez2/DeepBlueGame"><img src="img/GitHub-Mark-32px.png"> GitHub</a></div>'
+                break;
+            case 'gfm':
+                title = 'Generic File Monitor'
+                body = ''
+                break;
+            case 'tjm':
+                title = 'Track-It! Jira Integration'
+                body = ''
+                break;
+            case 'hadoop':
+                title = 'Hadoop Cluster Installation'
+                body = ''
+                break;
+            case 'google':
+                title = 'Google Album API'
+                body = ''
+                break;
+            case 'any':
+                title = ''
+                body = ''
+                break;
+        }
+        $("#modal-title").html(title);
+        $("#modal-body").html(body);
+    }
+
+    function pageChange(topic) {
+        var title = ''
+        var body = ''
+        switch (topic) {
+            case 'home':
+                body = '<h1>NOTHING</h1>'
+                $('#home-button').addClass('active')
+                $('#contact-button').removeClass('active')
+                break;
+            case 'contact':
+                body = '<div class="divider-new pt-5"><h2 class="h2-responsive wow fadeIn" data-wow-delay="0.2s">Contact</h2></div><div class="text-center"><a type="button" class="btn-primary btn-lg" href="https://github.com/mtam2"><img src="img/GitHub-Mark-32px.png"> GitHub</a><br><br> <a type="button" class="btn-success btn-lg black-text" href="mailto:mtamdev@gmail.com"><img src="img/gmail.ico" height="32" width="32"> Mtamdev@gmail.com</a><br><br> <a href="https://www.linkedin.com/in/maxim-tam-1103a6aa"><button type="button" class="btn-outline-primary btn-lg"><img src="img/linkedin.png" height="32" width="32"> LinkedIn</button></a><br><br></div>'
+                $('#contact-button').addClass('active')
+                $('#home-button').removeClass('active')
+                break;
+        }
+        $("#main").html(body);
+    }
+
+</script>
 
 </html>
