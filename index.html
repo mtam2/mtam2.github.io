@@ -1,88 +1,343 @@
 <!DOCTYPE html>
-<!--http://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp-->
 <html>
 
 <head>
     <title>Maxim's Homepage</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel='stylesheet' href='css/bootstrap.min.css'>
-    <!-- jQuery library -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/mdb.min.js"></script>
+    <script src="js/data.js"></script>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class='text-center'>
-            <h3>Maxim Tam</h3>
-            <h5>Junior Developer</h5>
+    <header>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="" onclick="pageChange('home')">Maxim Tam</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active" id="home-button">
+                            <a class="nav-link" onclick="pageChange('home')" data-toggle="collapse" data-target="#navbarSupportedContent">Home</a>
+                        </li>
+                        <li class="nav-item" id="resume-button">
+                            <a class="nav-link" href="res/MaximTamTechnicalResume.pdf">Resume</a>
+                        </li>
+                        <li class="nav-item" id="contact-button">
+                            <a class="nav-link" onclick="pageChange('contact')" data-toggle="collapse" data-target="#navbarSupportedContent">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--/.Navbar-->
+    </header>
+    <div class="container" id="main">
+
+        <div class="divider-new pt-5">
+            <h2 class="h2-responsive wow fadeIn" data-wow-delay="0.2s">About Maxim Tam</h2>
         </div>
-        <div class='col-md-8 col-md-offset-2 grey'>
-            <ul class="nav nav-pills nav-justified">
-                <li class="active"><a href="index.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class='row'>
-                <div class='col-sm-4 col-sm-offset-4 text-center'>
-                    <h3>Projects</h3>
+
+        <!--Section: About-->
+        <section id="about" class="text-center wow fadeIn" data-wow-delay="0.2s">
+            <p>He is a general purpose developer who has delved in various computer science fields such as data analytics, machine
+                learning, system integration, and desktop-mobile applet development.</p>
+        </section>
+        <!--Section: About-->
+
+        <div class="divider-new pt-5">
+            <h2 class="h2-responsive wow fadeIn">Projects</h2>
+        </div>
+        <p class="text-center">Click for more info</p>
+
+
+
+        <!--Section: Projects-->
+        <section id="projects">
+
+            <div class="row pt-3">
+
+                <!--First columnn-->
+                <div class="col-lg-4 mb-r">
+
+                    <!--Card-->
+                    <a href="https://github.com/mtam2/Track-It-Jira-Migration-Public">
+                        <div class="card wow fadeIn">
+
+                            <!--Card image-->
+                            <img class="img-fluid" src="img/TJM.png">
+
+                            <!--Card content-->
+                            <div class="card-body">
+                                <!--Title-->
+                                <h4 class="card-title text-center">Track-It! Jira Integration</h4>
+                                <hr>
+                                <!--Text-->
+                                <p class="card-text">System integration between two ticketing systems, BMC Track-It! and Jira Software.</p>
+                                <hr>
+                                <p class="card-text">Developers: D. Tremer, M. Tam</p>
+                            </div>
+
+                        </div>
+                    </a>
+                    <!--/.Card-->
                 </div>
-            </div>
-            <div class='row'>
-                <div class='col-sm-8'>
-                    <h3><a href="http://mtam2.github.io/Ctrl-Cloud/">Ctrl-Cloud v1.0</a></h3>
-                    <li>Multi-platform (Android, Web, Windows) integration with Ruby on Rails Backend</li>
-                    <li>Developed RESTful API to utilized JSON parsers for multi-platform access</li>
-                    <li>Deployed to Heroku, Google Play Store, Chrome Extension Store, Firefox Add-on Marketplace</li>
-                    <li>Utilized integration and unit testing tools like Selenium, MiniTest, JUnit</li>
-                    <br>
-                    <div class="embed-responsive embed-responsive-4by3">
-                        <iframe class="embed-responsive-item" src="http://mtam2.github.io/Ctrl-Cloud/"></iframe>
+                <!--First columnn-->
+
+                <!--Second columnn-->
+                <div class="col-lg-4 mb-r">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('gfm')">
+
+                        <!--Card image-->
+                        <img class="img-fluid" src="img/GFM.png">
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title text-center">Generic File Monitor</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">An application to analyze files' metadata using machine learning isolation forest algorithm.</p>
+                            <hr>
+                            <p class="card-text">Developers: D. Tremer, M. Tam</p>
+                        </div>
+
                     </div>
+
+                    <!--/.Card-->
                 </div>
-                <div class='col-sm-4'>
-                    <img align='right' src='img/ctrl_cloud_logo_128x128.png'>
+                <!--Second columnn-->
+
+                <!--Third columnn-->
+                <div class="col-lg-4 mb-r">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('hadoop')">
+
+                        <!--Card image-->
+                        <img class="img-fluid" src="img/hadoop.jpg">
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title text-center">Hadoop Cluster Installation</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">Custom built a Hadoop cluster with 5 decommissioned desktops.</p>
+                            <hr>
+                            <p class="card-text">Developers: D. Tremer, M. Tam</p>
+                        </div>
+
+                    </div>
+
+                    <!--/.Card-->
                 </div>
-            </div>
-            <div class='row'>
-                <div class='col-sm-8'>
-                    <h3><a href='https://github.com/agonzalez2/DeepBlueGame'>Deep Blue</a></h3>
-                    <li>Paired programming with two colleagues using Waterfall methodology</li>
-                    <li>Utilized Java 8 and Eclipse IDE to design, code, test a fully functional text-based adventure game</li>
-                    <li>Analyzed requirements specifications to construct UML/ERD diagrams, wireframes, and JUnit tests</li>
+                <!--Third columnn-->
+
+                <!--First columnn-->
+                <div class="col-lg-4 mb-r">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('ctrl-cloud')">
+
+                        <!--Card image-->
+                        <img class="img-fluid" src="img/ctrl_cloud_logo_SVG.png">
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title text-center">Ctrl-Cloud</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">A cross-platform cloud-based universal clipboard for Web, Windows, Android.</p>
+                            <hr>
+                            <p class="card-text">Developers: Derrick Baines, Joseph Oliver, Anthony Oliver, Maxim Tam</p>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
                 </div>
-            </div>
-            <div class='row'>
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <img class="img-responsive" src='img/DeepBlue.png'>
-                    <br><a class='text-center' href="res/DeepBlue.jar"><button type='button' class="btn btn-primary btn-sm">Download DeepBlue.jar</button></a>
+                <!--First columnn-->
+
+                <!--Second columnn-->
+                <div class="col-lg-4 mb-r">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('deep-blue')">
+                        <!--Card image-->
+                        <img class="img-fluid" src="img/DeepBlue.png">
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title text-center">Deep Blue</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">A text-based adventure game in Java.</p>
+                            <hr>
+                            <p class="card-text">Developers: A. Cronic, A. Gonzalez, M. Tam</p>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
                 </div>
-            </div>
-            <div class='row'>
-                <div class='col-sm-8'>
-                    <h3><a href="https://play.google.com/store/apps/details?id=commtam2.httpsgithub.dumbsmartphone">Simple Launcher Android Application</a></h3>
-                    <li>Designed, coded, unit tested a custom Android app to assist the visually impaired to use basic function
-                        of an Android phone</li>
+                <!--Second columnn-->
+
+                <!--Third columnn-->
+                <div class="col-lg-4 mb-r">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('google')">
+
+                        <!--Card image-->
+                        <img class="img-fluid" src="img/pi.jpg">
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title text-center">Google Album API</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">In development.</p>
+                            <hr>
+                            <p class="card-text">Developers: M. Tam</p>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
                 </div>
-            </div>
-            <div class='row'>
-                <div class='col-sm-8'>
-                    <h3><a href="https://github.com/mtam2/ComicShellScript">Automated Shell Comic Retriever</a></h3>
-                    <li>Automated retrieval of various webcomics via Shell scripting and crontab</li>
-                    <li>Automatically generates a main HTML page for comic viewing</li>
-                    <li>Deployed to a Ruby on Rails server on Heroku for live demo</li>
-                </div>
+                <!--Third columnn-->
             </div>
 
+        </section>
+        <!--/Section: Projects-->
+
+        <!-- Modal -->
+        <div id="project-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                        <h4 class="modal-title" id="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modal-body">Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                    </div>
+                </div>
+                <!-- /Modal content -->
+
+            </div>
         </div>
+        <!-- /Modal -->
+
+
     </div>
-    <br>
-    <p class="text-center">Word of the day: Defenestrate</p>
+    <!--/ Main container-->
 </body>
+<script>
+    function modalChange(project) {
+        var title = ''
+        var body = ''
+        switch (project) {
+            case 'ctrl-cloud':
+                title = 'Ctrl-Cloud'
+                body = `
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="http://mtam2.github.io/Ctrl-Cloud/"></iframe>
+                    </div><br>
+                    <h3 class="text-center">
+                        <a href="http://mtam2.github.io/Ctrl-Cloud/">External Link</a>
+                    </h3>
+                `
+                break;
+            case 'deep-blue':
+                title = 'Deep Blue'
+                body = `
+                    <img src="img/DeepBlue.png" class="img-fluid">
+                    <div class="text-center">
+                        <a type="button" class="btn btn-primary" href="https://github.com/agonzalez2/DeepBlueGame">
+                            <img src="img/GitHub-Mark-32px.png"> GitHub Repo
+                        </a><br>
+                        <a class='text-center' href="res/DeepBlue.jar">
+                            <button type='button' class="btn btn-primary">Download DeepBlue.jar</button>
+                        </a>
+                    </div>
+                `
+                break;
+            case 'gfm':
+                title = 'Generic File Monitor'
+                body = gfm
+                break;
+            case 'tjm':
+                title = 'Track-It! Jira Integration'
+                body = `
+                    <a type="button" class="btn btn-primary btn-sm" href="https://github.com/mtam2/Generic-File-Monitor-Public">
+                        <img src="img/GitHub-Mark-32px.png"> GitHub Repo
+                    </a>
+                `
+                break;
+            case 'hadoop':
+                title = 'Hadoop Cluster Installation'
+                body = hadoop
+                break;
+            case 'google':
+                title = 'Google Album API'
+                body = ``
+                break;
+        }
+        $("#modal-title").html(title);
+        $("#modal-body").html(body);
+    }
+
+    function pageChange(topic) {
+        var title = ''
+        var body = ''
+        switch (topic) {
+            case 'home':
+                body = home_html
+                $('#home-button').addClass('active')
+                $('#contact-button').removeClass('active')
+                break;
+            case 'contact':
+                body = `
+                    <div class="divider-new pt-5">
+                        <h2 class="h2-responsive wow fadeIn" data-wow-delay="0.2s">Contact</h2>
+                    </div>
+                    <div class="text-center">
+                        <a type="button" class="btn-primary btn-lg" href="https://github.com/mtam2">
+                            <img src="img/GitHub-Mark-32px.png"> GitHub
+                        </a>
+                        <br><br>
+                        <a type="button" class="btn-success btn-lg black-text" href="mailto:mtamdev@gmail.com">
+                            <img src="img/gmail.ico" height="32" width="32"> Mtamdev@gmail.com
+                        </a>
+                        <br><br>
+                        <a type="button" class="btn-outline-primary btn-lg" href="https://www.linkedin.com/in/maxim-tam-1103a6aa">
+                            <img src="img/linkedin.png" height="32" width="32"> LinkedIn
+                        </a>
+                        <br><br>
+                    </div>
+                `
+                $('#contact-button').addClass('active')
+                $('#home-button').removeClass('active')
+                break;
+        }
+        $("#main").html(body);
+    }
+
+</script>
 
 </html>
