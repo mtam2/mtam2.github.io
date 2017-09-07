@@ -160,7 +160,7 @@ var home_html = `
                     <h4 class="card-title text-center">Google Album API</h4>
                     <hr>
                     <!--Text-->
-                    <p class="card-text">In development.</p>
+                    <p class="card-text">Abandoned. Will revive if I can find a working Google Photos API upload/POST method.</p>
                     <hr>
                     <p class="card-text">Developers: M. Tam</p>
                 </div>
