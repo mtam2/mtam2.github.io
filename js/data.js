@@ -80,7 +80,7 @@ var home_html = `
             <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('hadoop')">
 
                 <!--Card image-->
-                <img class="img-fluid" src="img/hadoop.jpg" alt="Card image cap">
+                <img class="img-fluid" src="https://i.imgur.com/1SD2z0E.jpg" alt="Card image cap">
 
                 <!--Card content-->
                 <div class="card-body">
@@ -152,7 +152,7 @@ var home_html = `
             <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('google')">
 
                 <!--Card image-->
-                <img class="img-fluid" src="img/pi.jpg" alt="Card image cap">
+                <img class="img-fluid" src="https://i.imgur.com/qxpv4ia.jpg" alt="Card image cap">
 
                 <!--Card content-->
                 <div class="card-body">
@@ -176,7 +176,7 @@ var home_html = `
             <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('yolo')">
 
                 <!--Card image-->
-                <img class="img-fluid" src="img/yolo.png" alt="Card image cap">
+                <img class="img-fluid" src="https://i.imgur.com/elGO95I.png" alt="Card image cap">
 
                 <!--Card content-->
                 <div class="card-body">
@@ -497,175 +497,191 @@ var gfm = `
 `
 
 var yolo = `
-    <div id="temp" class="">
-    <!--Carousel Wrapper-->
-    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
-        <!--Indicators-->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
-        </ol>
-        <!--/.Indicators-->
-        <!--Slides-->
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <div class="view">
-                    <img class="d-block w-100" src="img/yolo.png" href="img/yolo.png" alt="First slide">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <!--Mask color-->
-                <div class="view">
-                    <img class="d-block w-100" src="img/GFM2.png" alt="Second slide">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <!--Mask color-->
-                <div class="view">
-                    <img class="d-block w-100" src="img/GFM3.png" alt="Third slide">
-                </div>
+<div id="temp" class="">
+<!--Carousel Wrapper-->
+<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <div class="view">
+                <a href="https://i.imgur.com/elGO95I.png"><img class="d-block w-100" src="https://i.imgur.com/elGO95I.png" alt="First slide"></a>
             </div>
         </div>
-        <!--/.Slides-->
-        <!--Controls-->
-        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-        <!--/.Controls-->
+        <div class="carousel-item">
+            <!--Mask color-->
+            <div class="view">
+            <a href="https://i.imgur.com/waWaJRP.png"><img class="d-block w-100" src="https://i.imgur.com/waWaJRP.png" alt="Second slide"></a>
+            </div>
+        </div>
     </div>
-    <!--/.Carousel Wrapper-->
-    <br>
-	<h2>Intro</h2>
-    <p>
-	This is a tutorial on how to implement <a href="https://pjreddie.com/darknet/yolo/">YOLO: Real-Time Object Detection</a> onto an IP camera. This is a combined tutorial of https://pjreddie.com/darknet/yolo/, http://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html, and http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html. Mad props to
-	Redmon, Joseph and Farhadi, Ali for creating such an awesome system, Trinh Hoang Trieu for Darknet, and
-	The OpenCV Project.
-	<br>
-	<code>
-		@article{redmon2016yolo9000,<br>
-		title={YOLO9000: Better, Faster, Stronger},<br>
-		author={Redmon, Joseph and Farhadi, Ali},<br>
-		journal={arXiv preprint arXiv:1612.08242},<br>
-		year={2016}}
-	</code>
-    </p>
-	<h2>Pre-Requisites</h2>
-	<p>Computer with the following</p>    
-	<ul>
-        <li>Ubuntu 16.04 LTS</li>
-        <li>Highly recommend a CUDA compatible Nvidia graphics card. (Demo uses GTX980)</li>
-    	</ul>
-	<h2>Step 1: Install CUDA for Linux</h2>
-	<ol>
-<li>Go to https://developer.nvidia.com/cuda-downloads and download Linux > x86_64 > Ubuntu > 16.04 > deb (network) cuda-repo-ubuntu1604_8.0.61-1_amd64.deb file.</li>
-<li>Run the following commands to install CUDA<br>
-<code>
-    sudo dpkg -i cuda-repo-ubuntu1604_8.0.61-1_amd64.deb<br>
-    sudo apt-get update<br>
-    sudo apt-get install cuda<br>
-    reboot<br>
-</code>
-After reboot, run this: <br>
-<code>export PATH=/usr/local/cuda-8.0/bin$\{PATH:+:$\{PATH\}\}</code>
-</li>
-<li>Verify CUDA and the Nvidia drivers have been properly install by running the following commands<br>
-<code>
-	nvidia-smi<br>
-	nvcc -V
-</code><br> If no errors appear, you're good to go!</li>
-	</ol>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+</div>
+<!--/.Carousel Wrapper-->
+<br>
+<h2>Intro</h2>
+<p>
+    This is a tutorial on how to implement <a href="https://pjreddie.com/darknet/yolo/">YOLO: Real-Time Object Detection</a>
+    onto an IP camera. This is a combined tutorial of <br><ul>
+        <li><a href="https://pjreddie.com/darknet/yolo/">https://pjreddie.com/darknet/yolo/</a></li>
+        <li><a href="http://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html">http://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html</a></li>
+        <li><a href="http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html</a></li>
+    </ul> Mad props to Redmon, Joseph and Farhadi, Ali for creating such an awesome system, Trinh Hoang Trieu for Darknet, and The OpenCV Project.<br>
+    <code>
+        @article{redmon2016yolo9000,<br>
+        title={YOLO9000: Better, Faster, Stronger},<br>
+        author={Redmon, Joseph and Farhadi, Ali},<br>
+        journal={arXiv preprint arXiv:1612.08242},<br>
+        year={2016}}
+    </code>
+</p>
+<h2>Pre-Requisites</h2>
+<p>Computer with the following</p>
+<ul>
+    <li>Ubuntu 16.04 LTS</li>
+    <li>Highly recommend a CUDA compatible Nvidia graphics card. (Demo uses GTX980)</li>
+</ul>
+<h2>Step 1: Install CUDA for Linux</h2>
+<ol>
+    <li>Go to https://developer.nvidia.com/cuda-downloads and download Linux > x86_64 > Ubuntu > 16.04 > deb (network) cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
+        file.
+    </li>
+    <li>Run the following commands to install CUDA<br>
+        <code>
+            sudo dpkg -i cuda-repo-ubuntu1604_8.0.61-1_amd64.deb<br>
+            sudo apt-get update<br>
+            sudo apt-get install cuda<br>
+            reboot<br>
+        </code> After reboot, run this: <br>
+        <code>export PATH=/usr/local/cuda-8.0/bin$\{PATH:+:$\{PATH\}\}</code>
+    </li>
+    <li>Verify CUDA and the Nvidia drivers have been properly install by running the following commands<br>
+        <code>
+            nvidia-smi<br>
+            nvcc -V
+        </code><br> If no errors appear, you're good to go!
+    </li>
+</ol>
 <h2>Step 2: Install cuDNN</h2>
 <ol>
-<li>Sign-up/login to download cuDNN v6.0 Library for Linux at https://developer.nvidia.com/rdp/cudnn-download</li>
-<li>Run the following commands to unzip and copy cuDNN to the CUDA directory:<br>
-<code>
-tar -xzvf cudnn-8.0-linux-x64-v6.0.tgz<br>
-sudo cp cuda/include/cudnn.h /usr/local/cuda/include<br>
-sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64<br>
-sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
-</code>
-</li>
+    <li>Sign-up/login to download cuDNN v6.0 Library for Linux at https://developer.nvidia.com/rdp/cudnn-download</li>
+    <li>Run the following commands to unzip and copy cuDNN to the CUDA directory:<br>
+        <code>
+            tar -xzvf cudnn-8.0-linux-x64-v6.0.tgz<br>
+            sudo cp cuda/include/cudnn.h /usr/local/cuda/include<br>
+            sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64<br>
+            sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+        </code>
+    </li>
 </ol>
 <h2>Step 3: Install OpenCV</h2>
 <ol>
-<li>Follow http://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html or the following</li>
-<li>Run the following commands to download & install dependencies:<br>
-<code>
-sudo apt-get install build-essential<br>
-sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev<br>
-sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev<br>
-sudo apt-get update<br>
-sudo apt-get upgrade
-</code></li>
-<li>Clone the master branch of the OpenCV git repo<br>
-<code>
-git clone https://github.com/opencv/opencv.git<br>
-cd opencv/
-</code></li>
-<li>Compile OpenCV:<br>
-<code>
-mkdir build<br>
-cd build/<br>
-cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..<br>
-make -j4<br>
-</code>
-This took 50 minutes to run on my 4 core 4Ghz 4690k so be patient. Edit the -j# option to how many cores your cpu has. 
-</li>
-<li>Create a PATH for OpenCV libs:<br>
-<code>
-nano /etc/ld.so.conf.d/opencv.conf<br>
-/usr/local/lib<br>
-CTRL+X<br>
-y
-</code>
-</li>
-<li>Install OpenCV:<br>
-<code>
-sudo make install
-</code>
-</li>
+    <li>Follow http://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html or the following</li>
+    <li>Run the following commands to download & install dependencies:<br>
+        <code>
+            sudo apt-get install build-essential<br>
+            sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev<br>
+            sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev<br>
+            sudo apt-get update<br>
+            sudo apt-get upgrade
+        </code></li>
+    <li>Clone the master branch of the OpenCV git repo<br>
+        <code>
+            git clone https://github.com/opencv/opencv.git<br>
+            cd opencv/
+        </code></li>
+    <li>Compile OpenCV:<br>
+        <code>
+            mkdir build<br>
+            cd build/<br>
+            cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..<br>
+            make -j4<br>
+        </code> This took 50 minutes to run on my 4 core 4Ghz 4690k so be patient. Edit the -j# option to how many cores
+        your cpu has.
+    </li>
+    <li>Create a PATH for OpenCV libs:<br>
+        <code>
+            nano /etc/ld.so.conf.d/opencv.conf<br>
+            /usr/local/lib<br>
+            CTRL+X<br>
+            y
+        </code>
+    </li>
+    <li>Install OpenCV:<br>
+        <code>
+            sudo make install
+        </code>
+    </li>
 </ol>
 <h2>Step 4: Install Darknet</h2>
 <ol>
-<li>Clone the Darknet git repo. cd out of the opencv directory if you haven't already.<br>
-<code>
-git clone https://github.com/pjreddie/darknet.git<br>
-cd darknet<br>
-</code>
-</li>
-<li>Enable CUDA and OpenCV in the Makefile:<br>
-<code>
-nano Makefile<br>
-Edit GPU, CUDNN, OPENCV to =1<br>
-CTRL+X<br>
-y<br>
-make
-</code></li>
-<li>Download the pre-trained weights.<br>
-<code>
-wget https://pjreddie.com/media/files/yolo.weights
-</code></li>
-<li>Test Darknet:<br>
-<code>
-./darknet detect cfg/yolo.cfg yolo.weights data/dog.jpg
-</code><br>
-View the output at predictions.png</li>
+    <li>Clone the Darknet git repo. cd out of the opencv directory if you haven't already.<br>
+        <code>
+            git clone https://github.com/pjreddie/darknet.git<br>
+            cd darknet<br>
+        </code>
+    </li>
+    <li>Enable CUDA and OpenCV in the Makefile:<br>
+        <code>
+            nano Makefile<br>
+            Edit GPU, CUDNN, OPENCV to =1<br>
+            CTRL+X<br>
+            y<br>
+            make
+        </code></li>
+    <li>Download the pre-trained weights.<br>
+        <code>
+            wget https://pjreddie.com/media/files/yolo.weights
+        </code>
+    </li>
+    <li>Test Darknet:<br>
+        <code>
+            ./darknet detect cfg/yolo.cfg yolo.weights data/dog.jpg
+        </code><br> View the output at predictions.png
+    </li>
 </ol>
 <h2>Step 5: Install IP Cam on your phone</h2>
 <ol>
-<li>For Android, I use <a href="https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en">IP Webcam by Pavel Khlebovich</a></li>
-<li>Start the IP Webcam server with no authentication</li>
-<li>Copy the IP address for use below</li>
+    <li>For Android, I use <a href="https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en">IP Webcam by Pavel Khlebovich</a></li>
+    <li>Start the IP Webcam server with no authentication</li>
+    <li>Copy the IP address for use below</li>
 </ol>
 <h2>Step 6: Run YOLO on the IP Cam:</h2>
 <code>
-./darknet detector demo cfg/coco.data cfg/yolo.cfg yolo.weights "http://192.168.1.14:8080/video"
+    ./darknet detector demo cfg/coco.data cfg/yolo.cfg yolo.weights "http://192.168.1.14:8080/video"
 </code>
-    </div>
+</div>
+`
+var google = `
+<p><a href="https://kunnas.com/google-photos-is-a-disaster/">Elias</a> is right, Google Photos is a developer's nightmare.
+    This project was to transform my Raspberry Pi Zero into a Google Photos upload device so I could simply slot
+    an SD card from a DSLR and upload all the photos straight to a new album. After digging through countless old Google tutorials and
+    deprecated documents, Google Photos has no public API to create new albums anymore. The Picasa Web API only allows for
+    getting album and image data but not to post anything back. The code below was all I could salvage without getting
+    <code>GooglePhotosException: (400, 'Bad Request', 'XXXX is no longer supported')</code> It pulls all the public album
+    data from a specific Google user. Python 2.7 with https://github.com/google/gdata-python-client : <br>
+    <pre><code>
+        albums = gd_client.GetUserFeed(user="mtamdev")
+        for album in albums.entry:
+            z = album
+            print 'title: %s, number of photos: %s, id: %s, link: %s' % (album.title.text,
+                album.numphotos.text, album.gphoto_id.text, album.GetHtmlLink())
+    </code></pre>
+</p>
 `

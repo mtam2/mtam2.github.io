@@ -95,29 +95,12 @@
                 break;
             case 'google':
                 title = 'Google Album API'
-                body = `
-                    <p><a href="https://kunnas.com/google-photos-is-a-disaster/">Elias</a> is right, Google Photos is a developer's nightmare.
-                        All I wanted to achieve was to transform my Raspberry Pi Zero into a Google Photos upload device so I could simply slot
-                        an SD card from a DSLR and upload all the photos straight to a new album. After digging through old Google tutorials and
-                        deprecated documents, Google Photos has no public API to create new albums anymore. The Picasa Web API only allows for
-                        getting album and image data but not to post anything back. The code below was all I could salvage without getting
-                        <code>GooglePhotosException: (400, 'Bad Request', 'XXXX is no longer supported')</code> It pulls all the public album
-                        data from a specific Google user. Python 2.7 with https://github.com/google/gdata-python-client : <br>
-                        <pre><code>
-albums = gd_client.GetUserFeed(user="mtamdev")
-for album in albums.entry:
-    z = album
-    print 'title: %s, number of photos: %s, id: %s, link: %s' % (album.title.text,
-        album.numphotos.text, album.gphoto_id.text, album.GetHtmlLink())
-                        </code></pre>
-
-                    </p>
-                `
+                body = google
                 break;
-	    case 'yolo':
-		title = 'Object Detection Webcam'
-		body = yolo
-		break;
+            case 'yolo':
+                title = 'Object Detection Webcam'
+                body = yolo
+                break;
         }
         $("#modal-title").html(title);
         $("#modal-body").html(body);
@@ -160,6 +143,7 @@ for album in albums.entry:
     }
 
     $(document).ready(pageChange("home"));
+
 </script>
 
 </html>
