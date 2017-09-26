@@ -191,6 +191,32 @@ var home_html = `
             <!--/.Card-->
         </div>
         <!--First columnn-->
+
+        <!--Second columnn-->
+        <div class="col-lg-4 mb-r">
+            <!--Card-->
+            <a href="https://www.thingiverse.com/thing:2553397">
+                <div class="card wow fadeIn">
+
+                    <!--Card image-->
+                    <img class="img-fluid" src="https://thingiverse-production-new.s3.amazonaws.com/renders/8f/db/ab/d6/cd/81641477443dfca4d059dd93d82f90e0_preview_featured.jpg" alt="Card image cap">
+
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title text-center">DC Lantern Rings</h4>
+                        <hr>
+                        <!--Text-->
+                        <p class="card-text">3D printable models of geometrically-accurate DC lantern rings.</p>
+                        <hr>
+                        <p class="card-text">Developed in Tinkercad and printed on a MakerBot Replicator 2.</p>
+                    </div>
+
+                </div>
+            </a>
+            <!--/.Card-->
+        </div>
+        <!--Second columnn-->
     </div>
 
     </section>
