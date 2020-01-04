@@ -5,15 +5,14 @@ var home_html = `
 
     <!--Section: About-->
     <section id="about" class="text-center wow fadeIn" data-wow-delay="0.2s">
-    <p>He is a general purpose developer who has delved in various computer science fields such as data analytics, machine
-        learning, system integration, and desktop-mobile applet development.</p>
+    <p> Aspiring developer trying to simplify life with automation. Avid learner of data science and machine learning.</p>
     </section>
     <!--Section: About-->
 
     <div class="divider-new pt-5">
     <h2 class="h2-responsive wow fadeIn">Projects</h2>
     </div>
-    <p class="text-center">Click for more info</p>
+    <p class="text-center">Click each project for more info</p>
 
 
 
@@ -80,7 +79,7 @@ var home_html = `
             <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('hadoop')">
 
                 <!--Card image-->
-                <img class="img-fluid" src="https://i.imgur.com/1SD2z0E.jpg" alt="Card image cap">
+                <img class="img-fluid" src="img/hadoop_cluster.jpg" alt="Card image cap">
 
                 <!--Card content-->
                 <div class="card-body">
@@ -152,7 +151,7 @@ var home_html = `
             <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('google')">
 
                 <!--Card image-->
-                <img class="img-fluid" src="https://i.imgur.com/qxpv4ia.jpg" alt="Card image cap">
+                <img class="img-fluid" src="img/pi_zero.jpg" alt="Card image cap">
 
                 <!--Card content-->
                 <div class="card-body">
@@ -176,7 +175,7 @@ var home_html = `
             <div class="card wow fadeIn" data-toggle="modal" data-target="#project-modal" onclick="modalChange('yolo')">
 
                 <!--Card image-->
-                <img class="img-fluid" src="https://i.imgur.com/elGO95I.png" alt="Card image cap">
+                <img class="img-fluid" src="img/yolo_1.png" alt="Card image cap">
 
                 <!--Card content-->
                 <div class="card-body">
@@ -396,31 +395,31 @@ var hadoop = `
         <ol>
             <li>
                 <p>Accept the license agreement</p>
-                <img class="img-fluid" src="https://i.imgur.com/6ppgkTm.jpg">
+                <img class="img-fluid" src="img/hadoop_1.jpg">
             </li>
             <li>
                 <p>Search for the clouderamaster IP on the searchbox, click search:</p>
-                <img class="img-fluid" src="https://i.imgur.com/65sWk03.jpg">
+                <img class="img-fluid" src="img/hadoop_2.jpg">
             </li>
             <li>
                 <p>Insert login credentials:</p>
-                <img class="img-fluid" src="https://i.imgur.com/WPKCeaQ.jpg">
+                <img class="img-fluid" src="img/hadoop_3.jpg">
             </li>
             <li>
                 <p>Do a parcel installation (some of them are not supported but maybe are needed after an upgrade):</p>
-                <img class="img-fluid" src="https://i.imgur.com/e1dybxB.jpg">
+                <img class="img-fluid" src="img/hadoop_4.jpg">
             </li>
             <li>
                 <p>After running the cluster installation it should look like this:</p>
-                <img class="img-fluid" src="https://i.imgur.com/6q0HkK8.jpg">
+                <img class="img-fluid" src="img/hadoop_5.jpg">
             </li>
             <li>
                 <p>Go on with the cluster setup and choose “All Services”, click continue on the next page:</p>
-                <img class="img-fluid" src="https://i.imgur.com/khodji3.jpg">
+                <img class="img-fluid" src="img/hadoop_6.jpg">
             </li>
             <li>
                 <p>After the cluster setup the host check-up should look like:</p>
-                <img class="img-fluid" src="https://i.imgur.com/1f3ZEdS.jpg">
+                <img class="img-fluid" src="img/hadoop_7.jpg">
             </li>
             <li>
                 <p>Continue, start the roles and finish the cluster setup.</p>
@@ -536,13 +535,13 @@ var yolo = `
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
             <div class="view">
-                <a href="https://i.imgur.com/elGO95I.png"><img class="d-block w-100" src="https://i.imgur.com/elGO95I.png" alt="First slide"></a>
+                <a href="img/yolo_1.png"><img class="d-block w-100" src="img/yolo_1.png" alt="First slide"></a>
             </div>
         </div>
         <div class="carousel-item">
             <!--Mask color-->
             <div class="view">
-            <a href="https://i.imgur.com/waWaJRP.png"><img class="d-block w-100" src="https://i.imgur.com/waWaJRP.png" alt="Second slide"></a>
+            <a href="img/yolo_2.png"><img class="d-block w-100" src="img/yolo_2.png" alt="Second slide"></a>
             </div>
         </div>
     </div>
